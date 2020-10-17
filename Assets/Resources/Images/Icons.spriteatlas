@@ -1,0 +1,94 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Icons
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 2
+      m_BuildTarget: DefaultTexturePlatform
+      m_MaxTextureSize: 1024
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: 4
+      m_TextureCompression: 1
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 0
+      m_AndroidETC2FallbackOverride: 0
+    - serializedVersion: 2
+      m_BuildTarget: Android
+      m_MaxTextureSize: 1024
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: 4
+      m_TextureCompression: 1
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 1
+      m_AndroidETC2FallbackOverride: 0
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 0
+      enableTightPacking: 0
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: 7b42d8ffdee757440816e7fed2e89306, type: 3}
+    totalSpriteSurfaceArea: 175105
+    bindAsDefault: 1
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: e8f1539024bcad744bd91b7c4010fb88, type: 3}
+  - {fileID: 21300000, guid: edc6c8e125a6f4f44bcbbb184c7aea20, type: 3}
+  - {fileID: 21300000, guid: 7a550d42d976f47448ccac2abdfa0ab7, type: 3}
+  - {fileID: 21300000, guid: 9feac5c298b7ff54a93167aac8a2fbf8, type: 3}
+  - {fileID: 21300000, guid: bd547bf270e42d04ca759414127ce2a5, type: 3}
+  - {fileID: 21300000, guid: d16b223563b0e014ab1a9692222d00c9, type: 3}
+  - {fileID: 21300000, guid: ab0ac145765707e4e8c65ce7828cbb29, type: 3}
+  - {fileID: 21300000, guid: d08dc4556d0755641a3dd4ed75f1c0a3, type: 3}
+  - {fileID: 21300000, guid: 73598b27346268943b423966e78afc93, type: 3}
+  - {fileID: 21300000, guid: 39b21118c40c42b4a9e6e09bb59bc266, type: 3}
+  - {fileID: 21300000, guid: 2bff734a84d21194e8e04e42d0034f75, type: 3}
+  - {fileID: 21300000, guid: 5f17292baad7ecd43bd64d412c1af380, type: 3}
+  - {fileID: 21300000, guid: 87702cdbea5e6d84b8f763f56cbb7d40, type: 3}
+  - {fileID: 21300000, guid: 2dbc4c3c1db24354380acfcb7db1460f, type: 3}
+  - {fileID: 21300000, guid: 0f16220d6fe2e1549bb23eecbe9c4c1f, type: 3}
+  - {fileID: 21300000, guid: ee12d97f1e9afb247be98f5a0735f135, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - home_ic_increase@2x
+  - SlotMachineMask
+  - home_top_bg@2x
+  - home_jar_front@2x
+  - home_slots_front@2x
+  - greenball@2x
+  - home_top_ic_greenball@2x
+  - home_blackball@2x
+  - home_jar@2x
+  - yellowball@2x
+  - slots@2x
+  - home_top_Fruits_number@2x
+  - home_ic_voice_on@2x
+  - home_ic_voice_off@2x
+  - home_ic_set_up@2x
+  - redball@2x
+  m_Tag: Icons
+  m_IsVariant: 0
