@@ -56,7 +56,7 @@ public class EnemiesController : MonoBehaviour
             transform.DOMove(EnemyMovePoints[pointsInPathCounter].transform.position, linsDistance*wayLengthToTimeRatio).SetEase(Ease.Linear).OnComplete(()=> {
                 if (pointsInPathCounter >= EnemyMovePoints.Count) { 
                     isPlaying = true;             // 全部动画播放结束，不再循环
-                    enemyRole.IsActiveGO = false;
+                    enemyRole.gameObject.SetActive(false);
                 }
                 else
                     isPlaying = false;

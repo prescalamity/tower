@@ -66,7 +66,9 @@
     <Compile Include="Assets\Demigiant\DOTweenPro\DOTweenAnimation.cs" />
     <Compile Include="Assets\Scripts\Controllers\BulletsController.cs" />
     <Compile Include="Assets\Scripts\Controllers\CannonsController.cs" />
+    <Compile Include="Assets\Scripts\Controllers\CreateCannonController.cs" />
     <Compile Include="Assets\Scripts\Controllers\EnemiesController.cs" />
+    <Compile Include="Assets\Scripts\Controllers\FortBarbettesController.cs" />
     <Compile Include="Assets\Scripts\Controllers\UIElementMoniter.cs" />
     <Compile Include="Assets\Scripts\FunctionCss\GameControl.cs" />
     <Compile Include="Assets\Scripts\FunctionCss\Loading.cs" />
@@ -79,7 +81,6 @@
     <Compile Include="Assets\Scripts\Models\Managers\EnemyManager.cs" />
     <Compile Include="Assets\Scripts\Models\Managers\GameLoader.cs" />
     <Compile Include="Assets\Scripts\Models\Managers\MapManager.cs" />
-    <Compile Include="Assets\Scripts\TestScript\ForTest.cs" />
     <Compile Include="Assets\Scripts\UIViewCs\CannonFollowMouseView.cs" />
     <Compile Include="Assets\Scripts\UIViewCs\MainView.cs" />
     <Compile Include="Assets\WinKFrame\Scripts\Event\EventButton.cs" />

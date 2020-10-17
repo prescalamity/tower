@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
@@ -6,6 +7,11 @@ using UnityEngine.Events;
 public class CannonManager : Inst<CannonManager>
 {
 
+    public Action<Cannon> CannonEndDragAction;
+
+    /// <summary>
+    /// 已实例化大炮
+    /// </summary>
     private List<Cannon> cannons = new List<Cannon>();
 
     private Cannon mainCannon;
@@ -21,7 +27,7 @@ public class CannonManager : Inst<CannonManager>
     private void Awake()
     {
         GameControl.Instance.hasGotMaxGradeChange += UpdateMainCannon;
-
+        CannonEndDragAction += CannonEndDragCannonState;
     }
 
     private void Start()
@@ -56,7 +62,7 @@ public class CannonManager : Inst<CannonManager>
 
         for (int i = 0; i < cannons.Count; i++)
         {
-            if (!cannons[i].IsActiveGO) return i;
+            if (!cannons[i].gameObject.activeInHierarchy) return i;
         }
 
         return -1;
@@ -64,12 +70,15 @@ public class CannonManager : Inst<CannonManager>
     }
 
     /// <summary>
-    /// 激活大炮
+    /// 取消大炮激活状态
     /// </summary>
     /// <returns></returns>
-    public void ActiveCannon(Vector3 position, int fortBarbettesId)
+    public void NotActiveCannon(Cannon  cannon)
     {
+        cannon.gameObject.SetActive(false);
 
+        // 从地图中拆除大炮
+        MapManager.Instance.FortBarbettesStatusArray[0, cannon.FortBarbettesId] = 0;
     }
 
     /// <summary>
@@ -91,28 +100,51 @@ public class CannonManager : Inst<CannonManager>
     }
 
     /// <summary>
-    /// 激活跟随鼠标对象
+    ///  处理鼠标开始拖拽大炮事件
     /// </summary>
-    public void ActiveCFM(int Grade)
+    /// <param name="SelectedGrade"></param>
+    /// <param name="CannonID"></param>
+    public void BeginDragCannonState(int SelectedGrade, int CannonID)
     {
-        cannonFollowMouseView.SetGrade(Grade);
+        // 激活跟随鼠标对象
+        cannonFollowMouseView.SetGrade(SelectedGrade);
         cannonFollowMouseView.SetImage(SpriteAtlasManager.Instance.GetSprite("home_top_Fruits_number@2x"));
 
-        Vector3 scenePos = new Vector3(Input.mousePosition.x, Input.mousePosition.y, 
+        Vector3 scenePos = new Vector3(Input.mousePosition.x, Input.mousePosition.y,
            GameLoader.Instance.UiCamera.WorldToScreenPoint(cannonFollowMouseView.transform.position).z);
         cannonFollowMouseView.transform.position = GameLoader.Instance.UiCamera.ScreenToWorldPoint(scenePos);
 
         cannonFollowMouseView.gameObject.SetActive(true);
+
+        // 激活被选大炮等级
+        for (int i = 0; i < cannons.Count; i++)
+        {
+            if (cannons[i].Grade == SelectedGrade && i != CannonID) cannons[i].SelectedImage.gameObject.SetActive(true);
+        }
     }
 
     /// <summary>
-    /// 取消跟随鼠标对象
+    /// 处理鼠标结束拖拽大炮事件
     /// </summary>
-    public void NotActionCFM()
+    private void CannonEndDragCannonState(Cannon SelectedCannon)
     {
+        // 取消跟随鼠标对象
         cannonFollowMouseView.gameObject.SetActive(false);
-    }
 
+
+        // 取消被选大炮等级， 并判断是否可以合并
+        for (int i = 0; i < cannons.Count; i++)
+        {
+            cannons[i].SelectedImage.gameObject.SetActive(false);
+
+            if(cannons[i].MouseIsHere && cannons[i].Grade== SelectedCannon.Grade && cannons[i].CannonID!= SelectedCannon.CannonID)
+            {
+                print("可以合并");
+            }
+        }
+
+        
+    }
 
 
 

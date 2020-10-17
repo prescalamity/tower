@@ -26,13 +26,20 @@ public class CannonsController : UnityEngine.EventSystems.EventTrigger
 
     public override void OnPointerEnter(PointerEventData eventData)
     {
-        print("CCCCCCCCCCCCCCCCCC");
+        //print("CCCCCCCCCCCCCCCCCC");
+        cannon.MouseIsHere = true;
+    }
+
+    public override void OnPointerExit(PointerEventData eventData)
+    {
+        cannon.MouseIsHere = false;
     }
 
     public override void OnBeginDrag(PointerEventData eventData)
     {
         //print("DDDDDDDDDDDDDDDDDDDDD");
-        CannonManager.Instance.ActiveCFM(cannon.Grade);
+        cannon.CannonImage.color = new Color(1f, 1f, 1f, 0.5f);
+        CannonManager.Instance.BeginDragCannonState(cannon.Grade, cannon.CannonID);
     }
 
     public override void OnDrag(PointerEventData eventData)
@@ -43,8 +50,8 @@ public class CannonsController : UnityEngine.EventSystems.EventTrigger
 
     public override void OnEndDrag(PointerEventData eventData)
     {
-        print("FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF");
-        CannonManager.Instance.NotActionCFM();
+        cannon.CannonImage.color = new Color(1f, 1f, 1f, 1f);
+        CannonManager.Instance.CannonEndDragAction?.Invoke(cannon);
     }
 
 }

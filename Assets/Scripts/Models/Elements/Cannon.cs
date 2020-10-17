@@ -9,36 +9,49 @@ using UnityEngine.UI;
 public class Cannon : RoleBase
 {
 
+    private int cannonID;
     private int fortBarbettesId=-1;
     private int grade=1;
 
-    private bool cannonSelected;
+    //private bool cannonSelected;
 
-    private Sprite CannonImageSprite;
+    private GameObject cannonImageGO;
+    private Image cannonImage;
     private Text GradeText;
-    private Transform SelectedImage;
+    private Transform selectedImage;
 
     private CannonsController cannonsController;
+    private bool mouseIsHere;
 
+    /// <summary>
+    /// 占地图中炮坑的ID
+    /// </summary>
     public int FortBarbettesId { get => fortBarbettesId; set => fortBarbettesId = value; }
     public int Grade { get => grade; set => grade = value; }
-    public bool CannonSelected { get => cannonSelected;
-        set {
-            cannonSelected = value;
-            if (cannonSelected)
-                SelectedImage.gameObject.SetActive(cannonSelected);
-            else
-                SelectedImage.gameObject.SetActive(!cannonSelected);
-        }
-    }
+    //public bool CannonSelected { get => cannonSelected;
+    //    set {
+    //    cannonSelected = value;
+    //        if (cannonSelected)
+    //            SelectedImage.gameObject.SetActive(cannonSelected);
+    //        else
+    //            SelectedImage.gameObject.SetActive(!cannonSelected);
+    //    }
+    //}
 
     public CannonsController CannonsController { get => cannonsController; }
+    public GameObject CannonImageGO { get => cannonImageGO;}
+    public Transform SelectedImage { get => selectedImage; set => selectedImage = value; }
+    public Image CannonImage { get => cannonImage; }
+    public int CannonID { get => cannonID; set => cannonID = value; }
+    public bool MouseIsHere { get => mouseIsHere; set => mouseIsHere = value; }
 
     private void Awake()
     {
-        CannonImageSprite = transform.Find("CannonImage").GetComponent<Image>().sprite;
+        cannonImageGO = transform.Find("CannonImage").gameObject;
+        cannonImage = CannonImageGO.GetComponent<Image>();
+
         GradeText = transform.Find("GradeBgImage").GetComponentInChildren<Text>();
-        SelectedImage = transform.Find("SelectedImage");
+        selectedImage = transform.Find("SelectedImage");
         cannonsController = transform.GetComponent<CannonsController>();
         attackDistance = 100;
     }

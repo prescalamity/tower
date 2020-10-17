@@ -41,7 +41,7 @@ public class EnemyManager : Inst<EnemyManager>
 
         for (int i = 0; i < enemies.Count; i++)
         {
-            if (!enemies[i].IsActiveGO) return i;
+            if (!enemies[i].gameObject.activeInHierarchy) return i;
         }
 
         return -1;
@@ -51,7 +51,7 @@ public class EnemyManager : Inst<EnemyManager>
     public void ActiveEnemy(int EnemyID)
     {
         Enemies[EnemyID].transform.position = MapManager.Instance.MonsterBirthplace.transform.position;
-        Enemies[EnemyID].IsActiveGO = true;
+        Enemies[EnemyID].gameObject.SetActive(true);
         Enemies[EnemyID].EnemiesController.IsPlaying = false;
         Enemies[EnemyID].EnemiesController.PointsInPathCounter = 0;
     }

@@ -9,11 +9,11 @@ public class MapManager : Inst<MapManager>
     private GameObject mainCannon;
     private GameObject monsterBirthplace;
     private GameObject homePlace;
-    private List<GameObject> fortBarbettes=new List<GameObject>();
+    private List<FortBarbettesController> fortBarbettes=new List<FortBarbettesController>();
     /// <summary>
     /// 第一维（行）保存该炮台是否被占领，以及第二维（行）所占领炮的等级
     /// </summary>
-    private int[,] FortBarbettesStatusArray;
+    private int[,] fortBarbettesStatusArray;
 
     private List<GameObject> enemyMovePoints = new List<GameObject>();
 
@@ -21,8 +21,9 @@ public class MapManager : Inst<MapManager>
     public GameObject MainCannon { get => mainCannon; }
     public GameObject MonsterBirthplace { get => monsterBirthplace;  }
     public GameObject HomePlace { get => homePlace;  }
-    public List<GameObject> FortBarbettes { get => fortBarbettes;  }
+    public List<FortBarbettesController> FortBarbettes { get => fortBarbettes;  }
     public List<GameObject> EnemyMovePoints { get => enemyMovePoints;  }
+    public int[,] FortBarbettesStatusArray { get => fortBarbettesStatusArray;  }
 
     private void Awake()
     {
@@ -31,10 +32,12 @@ public class MapManager : Inst<MapManager>
         mainCannon = Map.transform.Find("MainCannon").gameObject;
         monsterBirthplace = Map.transform.Find("MonsterBirthplace").gameObject;
         homePlace = Map.transform.Find("HomePlace").gameObject;
-        foreach (Transform item in Map.transform.Find("FortBarbettes")) fortBarbettes.Add(item.gameObject);
-        FortBarbettesStatusArray = new int[2,fortBarbettes.Count];
+        foreach (Transform item in Map.transform.Find("FortBarbettes")) fortBarbettes.Add(item.gameObject.GetComponent<FortBarbettesController>());
+        fortBarbettesStatusArray = new int[2,fortBarbettes.Count];
         foreach (Transform item in Map.transform.Find("InflectionPoints")) enemyMovePoints.Add(item.gameObject);
         enemyMovePoints.Add(homePlace);
+
+        CannonManager.Instance.CannonEndDragAction += MapEndDragCannonState;
     }
 
     /// <summary>
@@ -43,10 +46,10 @@ public class MapManager : Inst<MapManager>
     /// <returns></returns>
     private int GetAvailableFortBarbettesID()
     {
-        for (int i=0; i< FortBarbettesStatusArray.GetLength(1); i++)
+        for (int i=0; i< fortBarbettesStatusArray.GetLength(1); i++)
         {
             
-            if (FortBarbettesStatusArray[0, i] == 0) return i;
+            if (fortBarbettesStatusArray[0, i] == 0) return i;
         }
         return -1;
     }
@@ -63,20 +66,48 @@ public class MapManager : Inst<MapManager>
         if (Id != -1)
         {
             
-            FortBarbettesStatusArray[0, Id] = 1;
-            FortBarbettesStatusArray[1, Id] = CannonManager.Instance.Cannons[CannonID].Grade;
+            fortBarbettesStatusArray[0, Id] = 1;
+            fortBarbettesStatusArray[1, Id] = CannonManager.Instance.Cannons[CannonID].Grade;
 
             // 激活大炮
             CannonManager.Instance.Cannons[CannonID].InitCannon();    //初始化大炮
             CannonManager.Instance.Cannons[CannonID].transform.position = FortBarbettes[Id].transform.position;  //设置大炮位置
             CannonManager.Instance.Cannons[CannonID].FortBarbettesId = Id;           //大炮安装位置ID
+            CannonManager.Instance.Cannons[CannonID].gameObject.SetActive(true);
 
             return true;
         }
 
         return false;
-    } 
+    }
 
+
+    /// <summary>
+    /// 处理鼠标结束拖拽大炮事件
+    /// </summary>
+    private void MapEndDragCannonState( Cannon cannon)
+    {
+
+        // 取消被选大炮等级， 并判断是否可以合并
+        for (int i = 0; i < fortBarbettes.Count; i++)
+        {
+            if (fortBarbettes[i].MouseIsHere  && i != cannon.FortBarbettesId) 
+            {
+                // 从地图中拆除大炮
+                fortBarbettesStatusArray[0, cannon.FortBarbettesId] = 0;
+
+                //从新安装大炮
+                fortBarbettesStatusArray[0, i] = 1;
+                fortBarbettesStatusArray[1, i] = cannon.Grade;
+
+                cannon.gameObject.transform.position = FortBarbettes[i].transform.position;
+                cannon.FortBarbettesId = i;
+               
+            }
+        }
+
+
+    }
 
 }
 

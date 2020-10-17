@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5108801138786686418}
   - component: {fileID: 700393024293408835}
   - component: {fileID: 7740725118084696630}
+  - component: {fileID: 58511327109853455}
   m_Layer: 5
   m_Name: FortBarbetteImage (14)
   m_TagString: Untagged
@@ -72,6 +73,20 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
+--- !u!114 &58511327109853455
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 115285270012338034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c858b025769f6c4e8bd5ed5347f2a73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates: []
+  delegates: []
 --- !u!1 &388773349850829148
 GameObject:
   m_ObjectHideFlags: 0
@@ -83,6 +98,7 @@ GameObject:
   - component: {fileID: 8940610201094722357}
   - component: {fileID: 6819602070340705661}
   - component: {fileID: 5962343048154054151}
+  - component: {fileID: 6825688632292743049}
   m_Layer: 5
   m_Name: FortBarbetteImage (9)
   m_TagString: Untagged
@@ -144,6 +160,20 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
+--- !u!114 &6825688632292743049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 388773349850829148}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c858b025769f6c4e8bd5ed5347f2a73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates: []
+  delegates: []
 --- !u!1 &428961944712464832
 GameObject:
   m_ObjectHideFlags: 0
@@ -231,6 +261,7 @@ GameObject:
   - component: {fileID: 6021041230099116171}
   - component: {fileID: 3904831129844859917}
   - component: {fileID: 5489308105629768114}
+  - component: {fileID: 4647468855533573617}
   m_Layer: 5
   m_Name: FortBarbetteImage (5)
   m_TagString: Untagged
@@ -292,6 +323,20 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
+--- !u!114 &4647468855533573617
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 653873081103293649}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c858b025769f6c4e8bd5ed5347f2a73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates: []
+  delegates: []
 --- !u!1 &1039668541884097539
 GameObject:
   m_ObjectHideFlags: 0
@@ -343,6 +388,7 @@ GameObject:
   - component: {fileID: 28663671689074504}
   - component: {fileID: 9155163454940161566}
   - component: {fileID: 7184281692947229372}
+  - component: {fileID: 3648485469428840969}
   m_Layer: 5
   m_Name: FortBarbetteImage (1)
   m_TagString: Untagged
@@ -404,6 +450,20 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
+--- !u!114 &3648485469428840969
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1057386693003757791}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c858b025769f6c4e8bd5ed5347f2a73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates: []
+  delegates: []
 --- !u!1 &2262958499025286320
 GameObject:
   m_ObjectHideFlags: 0
@@ -415,6 +475,7 @@ GameObject:
   - component: {fileID: 5552640936767928169}
   - component: {fileID: 6787059889337151031}
   - component: {fileID: 184063494564853045}
+  - component: {fileID: 1410725232873601631}
   m_Layer: 5
   m_Name: FortBarbetteImage (13)
   m_TagString: Untagged
@@ -476,6 +537,20 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
+--- !u!114 &1410725232873601631
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2262958499025286320}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c858b025769f6c4e8bd5ed5347f2a73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates: []
+  delegates: []
 --- !u!1 &2268316803261542507
 GameObject:
   m_ObjectHideFlags: 0
@@ -559,6 +634,7 @@ GameObject:
   - component: {fileID: 1865728913459049020}
   - component: {fileID: 3787353114748489165}
   - component: {fileID: 9001839216709098006}
+  - component: {fileID: 4379817524763714241}
   m_Layer: 5
   m_Name: FortBarbetteImage (12)
   m_TagString: Untagged
@@ -620,6 +696,20 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
+--- !u!114 &4379817524763714241
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3589294359883212852}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c858b025769f6c4e8bd5ed5347f2a73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates: []
+  delegates: []
 --- !u!1 &3704905862324769915
 GameObject:
   m_ObjectHideFlags: 0
@@ -631,6 +721,7 @@ GameObject:
   - component: {fileID: 4624585263908412456}
   - component: {fileID: 8468773045003417031}
   - component: {fileID: 2108376641421220425}
+  - component: {fileID: 5065110764909715344}
   m_Layer: 5
   m_Name: FortBarbetteImage (8)
   m_TagString: Untagged
@@ -692,6 +783,20 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
+--- !u!114 &5065110764909715344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3704905862324769915}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c858b025769f6c4e8bd5ed5347f2a73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates: []
+  delegates: []
 --- !u!1 &4206204537598890773
 GameObject:
   m_ObjectHideFlags: 0
@@ -703,6 +808,7 @@ GameObject:
   - component: {fileID: 4761807790335846239}
   - component: {fileID: 3690424678405575182}
   - component: {fileID: 7454294547524657788}
+  - component: {fileID: 4558907572069626139}
   m_Layer: 5
   m_Name: FortBarbetteImage (3)
   m_TagString: Untagged
@@ -764,6 +870,20 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
+--- !u!114 &4558907572069626139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4206204537598890773}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c858b025769f6c4e8bd5ed5347f2a73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates: []
+  delegates: []
 --- !u!1 &4575087278076374464
 GameObject:
   m_ObjectHideFlags: 0
@@ -847,6 +967,7 @@ GameObject:
   - component: {fileID: 5102242605522158797}
   - component: {fileID: 9184476458673259445}
   - component: {fileID: 8802682210403085191}
+  - component: {fileID: 7769941181153518512}
   m_Layer: 5
   m_Name: FortBarbetteImage (4)
   m_TagString: Untagged
@@ -908,6 +1029,20 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
+--- !u!114 &7769941181153518512
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4777337293571366503}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c858b025769f6c4e8bd5ed5347f2a73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates: []
+  delegates: []
 --- !u!1 &4901499554664629609
 GameObject:
   m_ObjectHideFlags: 0
@@ -1063,6 +1198,7 @@ GameObject:
   - component: {fileID: 3955869441483787491}
   - component: {fileID: 5313985103806525024}
   - component: {fileID: 2730116657895724702}
+  - component: {fileID: 2984553082951016140}
   m_Layer: 5
   m_Name: FortBarbetteImage (11)
   m_TagString: Untagged
@@ -1124,6 +1260,20 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
+--- !u!114 &2984553082951016140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5714740996542481367}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c858b025769f6c4e8bd5ed5347f2a73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates: []
+  delegates: []
 --- !u!1 &6028874568280277662
 GameObject:
   m_ObjectHideFlags: 0
@@ -1135,6 +1285,7 @@ GameObject:
   - component: {fileID: 9109443113922770372}
   - component: {fileID: 4193221596170575822}
   - component: {fileID: 3028877522929891752}
+  - component: {fileID: 9126056494588673215}
   m_Layer: 5
   m_Name: FortBarbetteImage (7)
   m_TagString: Untagged
@@ -1196,6 +1347,20 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
+--- !u!114 &9126056494588673215
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6028874568280277662}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c858b025769f6c4e8bd5ed5347f2a73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates: []
+  delegates: []
 --- !u!1 &6727521919637783814
 GameObject:
   m_ObjectHideFlags: 0
@@ -1241,6 +1406,7 @@ GameObject:
   - component: {fileID: 4779424971227540364}
   - component: {fileID: 3366889309228211847}
   - component: {fileID: 1365551892588993560}
+  - component: {fileID: 3673680907312357186}
   m_Layer: 5
   m_Name: FortBarbetteImage (10)
   m_TagString: Untagged
@@ -1302,6 +1468,20 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
+--- !u!114 &3673680907312357186
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6760959135941668102}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c858b025769f6c4e8bd5ed5347f2a73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates: []
+  delegates: []
 --- !u!1 &6805894400742222710
 GameObject:
   m_ObjectHideFlags: 0
@@ -1385,6 +1565,7 @@ GameObject:
   - component: {fileID: 3426080912082954915}
   - component: {fileID: 8983991789498806234}
   - component: {fileID: 3168714253389339850}
+  - component: {fileID: 7140085646177599796}
   m_Layer: 5
   m_Name: FortBarbetteImage
   m_TagString: Untagged
@@ -1446,6 +1627,20 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
+--- !u!114 &7140085646177599796
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7100608542695272056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c858b025769f6c4e8bd5ed5347f2a73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates: []
+  delegates: []
 --- !u!1 &7315946956127441329
 GameObject:
   m_ObjectHideFlags: 0
@@ -1457,6 +1652,7 @@ GameObject:
   - component: {fileID: 8125829069093051557}
   - component: {fileID: 842347921793371537}
   - component: {fileID: 3396142331582009655}
+  - component: {fileID: 7190758320472672372}
   m_Layer: 5
   m_Name: FortBarbetteImage (2)
   m_TagString: Untagged
@@ -1518,6 +1714,20 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
+--- !u!114 &7190758320472672372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7315946956127441329}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c858b025769f6c4e8bd5ed5347f2a73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates: []
+  delegates: []
 --- !u!1 &7621285605486942116
 GameObject:
   m_ObjectHideFlags: 0
@@ -1529,6 +1739,7 @@ GameObject:
   - component: {fileID: 4941560909630497822}
   - component: {fileID: 4867219324363311525}
   - component: {fileID: 8525157641581786432}
+  - component: {fileID: 9196239905444845654}
   m_Layer: 5
   m_Name: FortBarbetteImage (15)
   m_TagString: Untagged
@@ -1590,6 +1801,20 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
+--- !u!114 &9196239905444845654
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7621285605486942116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c858b025769f6c4e8bd5ed5347f2a73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates: []
+  delegates: []
 --- !u!1 &7866195952567885770
 GameObject:
   m_ObjectHideFlags: 0
@@ -1673,6 +1898,7 @@ GameObject:
   - component: {fileID: 136909074502802339}
   - component: {fileID: 6454236272418526699}
   - component: {fileID: 2205943612600425091}
+  - component: {fileID: 3916738247893610999}
   m_Layer: 5
   m_Name: FortBarbetteImage (6)
   m_TagString: Untagged
@@ -1734,6 +1960,20 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
+--- !u!114 &3916738247893610999
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8416402606379146395}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c858b025769f6c4e8bd5ed5347f2a73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates: []
+  delegates: []
 --- !u!1 &8672651016906583208
 GameObject:
   m_ObjectHideFlags: 0

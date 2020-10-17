@@ -80,9 +80,10 @@ public class GameLoader : Inst<GameLoader>
         {
             CannonManager.Instance.AddCannon(Instantiate(cannonPrefab).GetComponent<Cannon>());
             Cannons[Cannons.Count - 1].transform.SetParent(canvasGO.transform, false);
-     
+            Cannons[Cannons.Count - 1].CannonID = Cannons.Count - 1;
+
             if (!MapManager.Instance.InstallCannonToFB(Cannons.Count - 1)) {
-                Cannons[Cannons.Count - 1].IsActiveGO = false;
+                Cannons[Cannons.Count - 1].gameObject.SetActive(false);
                 print("炮台已满，大炮安装失败！");
             }
 
