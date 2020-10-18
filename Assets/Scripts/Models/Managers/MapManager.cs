@@ -59,20 +59,22 @@ public class MapManager : Inst<MapManager>
     /// </summary>
     /// <param name="cannon"></param>
     /// <returns></returns>
-    public bool InstallCannonToFB(int CannonID)
+    public bool InstallCannonToFB(int CannonID, int InitGrade)
     {
-       
-        int Id = GetAvailableFortBarbettesID();
-        if (Id != -1)
+        
+         int  FortBarbettesID = GetAvailableFortBarbettesID();
+
+        if (FortBarbettesID != -1)
         {
             
-            fortBarbettesStatusArray[0, Id] = 1;
-            fortBarbettesStatusArray[1, Id] = CannonManager.Instance.Cannons[CannonID].Grade;
+            fortBarbettesStatusArray[0, FortBarbettesID] = 1;
+            fortBarbettesStatusArray[1, FortBarbettesID] = CannonManager.Instance.Cannons[CannonID].Grade;
 
             // 激活大炮
+            CannonManager.Instance.Cannons[CannonID].Grade = InitGrade;
             CannonManager.Instance.Cannons[CannonID].InitCannon();    //初始化大炮
-            CannonManager.Instance.Cannons[CannonID].transform.position = FortBarbettes[Id].transform.position;  //设置大炮位置
-            CannonManager.Instance.Cannons[CannonID].FortBarbettesId = Id;           //大炮安装位置ID
+            CannonManager.Instance.Cannons[CannonID].transform.position = FortBarbettes[FortBarbettesID].transform.position;  //设置大炮位置
+            CannonManager.Instance.Cannons[CannonID].FortBarbettesId = FortBarbettesID;           //大炮安装位置ID
             CannonManager.Instance.Cannons[CannonID].gameObject.SetActive(true);
 
             return true;
@@ -81,6 +83,18 @@ public class MapManager : Inst<MapManager>
         return false;
     }
 
+    public void ExchangeTwoCannons(Cannon cannon1, Cannon cannon2)
+    {
+        int cannon1FortBarbettesID = cannon1.FortBarbettesId;
+
+        fortBarbettesStatusArray[1, cannon2.FortBarbettesId] = cannon1.Grade;
+        cannon1.transform.position = FortBarbettes[cannon2.FortBarbettesId].transform.position;  //设置大炮位置
+        cannon1.FortBarbettesId = cannon2.FortBarbettesId;           //大炮安装位置ID
+
+        fortBarbettesStatusArray[1, cannon1FortBarbettesID] = cannon2.Grade;
+        cannon2.transform.position = FortBarbettes[cannon1FortBarbettesID].transform.position;  //设置大炮位置
+        cannon2.FortBarbettesId = cannon1FortBarbettesID;           //大炮安装位置ID
+    }
 
     /// <summary>
     /// 处理鼠标结束拖拽大炮事件

@@ -46,9 +46,8 @@ public class CreateCannonController : UnityEngine.EventSystems.EventTrigger
 
     public override void OnPointerClick(PointerEventData eventData)
     {
-        if (CanCreateCannonTotal > 0)
+        if (CanCreateCannonTotal > 0 && GameLoader.Instance.AddCannonToScene())
         {
-            GameLoader.Instance.AddCannonToScene();
             CanCreateCannonTotal--;
             rateText.text = CanCreateCannonTotal + "/20";
         }

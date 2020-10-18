@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 /// <summary>
-/// 大炮的属性状态信息
+/// 大炮的属性状态信息，和view脚本
 /// </summary>
 public class Cannon : RoleBase
 {
@@ -66,12 +66,12 @@ public class Cannon : RoleBase
     }
 
     /// <summary>
-    /// 刷新大炮属性
+    /// 刷新大炮属性视图
     /// </summary>
-    public void RefreshCannon()
+    public void RefreshCannonView()
     {
         //CannonImageSprite = cannonSprite;
-        //GradeText.text = grade.ToString();
+        GradeText.text = grade.ToString();
     }
 
 

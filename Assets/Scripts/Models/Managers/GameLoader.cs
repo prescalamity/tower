@@ -70,30 +70,35 @@ public class GameLoader : Inst<GameLoader>
 
     }
 
+
     /// <summary>
     /// 增加大炮到 游戏场景 和 管理器 中
     /// </summary>
-    public void AddCannonToScene()
+    public bool AddCannonToScene()
     {
-        int linsId=CannonManager.Instance.GetFirstNotActiveCannon();
-        if (linsId == -1)
+        int CannonID=CannonManager.Instance.GetFirstNotActiveCannon();
+        if (CannonID == -1)
         {
             CannonManager.Instance.AddCannon(Instantiate(cannonPrefab).GetComponent<Cannon>());
             Cannons[Cannons.Count - 1].transform.SetParent(canvasGO.transform, false);
             Cannons[Cannons.Count - 1].CannonID = Cannons.Count - 1;
 
-            if (!MapManager.Instance.InstallCannonToFB(Cannons.Count - 1)) {
+            if (!MapManager.Instance.InstallCannonToFB(Cannons.Count - 1, 1)) {
                 Cannons[Cannons.Count - 1].gameObject.SetActive(false);
                 print("炮台已满，大炮安装失败！");
+                return false;
             }
 
 
         }
         else
         {
-            if(!MapManager.Instance.InstallCannonToFB(linsId)) print("炮台已满，大炮安装失败！");
+            if (!MapManager.Instance.InstallCannonToFB(CannonID, 1)) {
+                print("炮台已满，大炮安装失败！");
+                return false;
+            } 
         }
-
+        return true;
      }
 
     /// <summary>

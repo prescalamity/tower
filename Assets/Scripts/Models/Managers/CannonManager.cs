@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.Networking;
 
 public class CannonManager : Inst<CannonManager>
 {
@@ -95,7 +96,7 @@ public class CannonManager : Inst<CannonManager>
         else
         {
             mainCannon.Grade = GameControl.Instance.HasGotMaxGrade;
-
+            mainCannon.RefreshCannonView();
         }
     }
 
@@ -131,16 +132,30 @@ public class CannonManager : Inst<CannonManager>
         // 取消跟随鼠标对象
         cannonFollowMouseView.gameObject.SetActive(false);
 
-
         // 取消被选大炮等级， 并判断是否可以合并
         for (int i = 0; i < cannons.Count; i++)
         {
             cannons[i].SelectedImage.gameObject.SetActive(false);
 
-            if(cannons[i].MouseIsHere && cannons[i].Grade== SelectedCannon.Grade && cannons[i].CannonID!= SelectedCannon.CannonID)
+            // 拖拽结束时，指针在某个炮坑
+            if(cannons[i].MouseIsHere && cannons[i].CannonID!= SelectedCannon.CannonID)
             {
-                print("可以合并");
+                if (cannons[i].Grade == SelectedCannon.Grade)  //等级不同，合并大炮
+                {
+                    NotActiveCannon(SelectedCannon);
+                    cannons[i].Grade++;
+                    GameControl.Instance.HasGotMaxGrade = cannons[i].Grade;
+
+                    //刷新view
+                    Cannons[i].RefreshCannonView();
+                }
+                else  //等级不同，交换位置
+                {
+                    MapManager.Instance.ExchangeTwoCannons(cannons[i], SelectedCannon);
+                }
+               
             }
+
         }
 
         
